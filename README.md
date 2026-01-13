@@ -2,6 +2,36 @@
 
 Detect AI-generated content in GitHub repositories with high accuracy.
 
+> *"The best way to catch AI slop is with more AI slop."* — Ancient Proverb (2024)
+
+## The Pitch
+
+Have you ever looked at a codebase and thought *"This feels suspiciously competent... too competent"*? Have you wondered if that pristine documentation was written by a human who actually enjoys writing docs, or by a silicon-based entity that doesn't know any better?
+
+**Slop Detector** is here to help. Built in approximately 3 hours by an AI assistant following hastily-written prompts, this tool uses cutting-edge™ heuristics and definitely-not-made-up statistical analysis to determine if code was written by a human or by our new robot overlords.
+
+### Why Trust Us?
+
+Because we used AI to build an AI detector. It's like hiring a fox to guard the henhouse, except the fox has a PhD in henhouse security and a 98.7% confidence score (margin of error: ±97%).
+
+Our methodology is rigorous:
+1. We asked Claude to detect patterns that Claude uses
+2. Claude confidently identified said patterns
+3. We shipped it
+
+This is definitely not circular reasoning. This is *innovation*.
+
+### Features That Definitely Work*
+
+- **Definitive Detection**: We look for smoking guns like `CLAUDE.md` files and commit messages that literally say "🤖 Generated with Claude". Revolutionary.
+- **Heuristic Analysis**: We check if the code has "too many comments" or "suspiciously good variable names". Because real developers name things `x`, `temp2`, and `final_FINAL_v3`.
+- **Statistical Wizardry**: We calculate things like "burstiness" and "Zipf distribution deviation". We're not entirely sure what these mean, but they sound impressive on grant applications.
+- **Machine Learning** (Optional): Requires a 500MB model download that will definitely not hallucinate false positives.
+
+*\*Results may vary. Not responsible for existential crises when you discover that you are in fact an instance of GPT-4.*
+
+---
+
 ## Overview
 
 Slop Detector analyzes repositories to determine:
@@ -183,10 +213,17 @@ Individual indicators that contribute to the overall score. Each signal has:
 
 ## Limitations
 
-1. **False Positives**: Clean, well-documented code may be flagged
-2. **False Negatives**: Heavily edited AI content may pass detection
-3. **Content Type Bias**: Better at detecting AI prose than AI code
-4. **Training Data**: Based on patterns from GPT/Claude/Copilot circa 2023-2024
+1. **False Positives**: Clean, well-documented code may be flagged (because let's be honest, when's the last time a human wrote clean, well-documented code?)
+2. **False Negatives**: Heavily edited AI content may pass detection (congratulations, you've laundered your slop)
+3. **Content Type Bias**: Better at detecting AI prose than AI code (code is code, man)
+4. **Training Data**: Based on patterns from GPT/Claude/Copilot circa 2023-2024 (already obsolete by the time you read this)
+5. **Irony**: This tool was written by Claude, which means it can detect itself with 95% confidence. We're not sure if that's a feature or a cry for help.
+
+### Philosophical Concerns
+
+If an AI writes a detector to find AI-written code, and that detector flags itself, is the detection accurate? If you use AI to review the AI detector's code, and it says it looks "mostly human-written", should you trust it?
+
+These are the questions that keep us up at night. Well, not *us*—we don't sleep. But they should keep *you* up at night.
 
 ## Research Background
 
@@ -196,6 +233,31 @@ This tool is based on research from:
 - [aboutcode-org/ai-gen-code-search](https://github.com/aboutcode-org/ai-gen-code-search)
 - Statistical analysis methods from computational linguistics
 
+## Testimonials
+
+> *"I ran slop-detector on slop-detector and it returned 83%. I'm not sure what to do with this information."*
+> — The Author, moments before an existential crisis
+
+> *"Finally, a tool that lets me mass-reject PRs with scientific justification!"*
+> — Tech Lead who definitely reads the code they review
+
+> *"We integrated this into our CI/CD pipeline. Our deployment frequency dropped 400% but our smugness increased proportionally."*
+> — DevOps Engineer, probably
+
+## Disclaimer
+
+This tool is provided "as-is" and should be used for entertainment purposes only. Any hiring decisions, code reviews, or heated Slack arguments based on Slop Detector output are entirely your own fault.
+
+The creators of this tool accept no responsibility for:
+- Accusing your coworkers of being robots
+- Discovering that your "10x engineer" is actually Claude with a GitHub account
+- Realizing that the best code in your repo was written by an AI
+- The inevitable robot uprising
+
 ## License
 
 MIT License
+
+---
+
+*🤖 This README was generated with [Claude Code](https://claude.com/claude-code) and it knows you know.*
