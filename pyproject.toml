@@ -1,0 +1,68 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "slop-detector"
+version = "0.1.0"
+description = "Detect AI-generated content in GitHub repositories"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Slop Detector Team" }
+]
+keywords = ["ai", "detection", "github", "code-analysis", "llm"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+dependencies = [
+    "click>=8.0",
+    "gitpython>=3.1",
+    "rich>=13.0",
+    "transformers>=4.35",
+    "torch>=2.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "requests>=2.28",
+    "pyyaml>=6.0",
+    "tiktoken>=0.5",
+    "tree-sitter>=0.20",
+    "chardet>=5.0",
+    "pathspec>=0.11",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1",
+    "mypy>=1.0",
+]
+
+[project.scripts]
+slop-detector = "slop_detector.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/slop_detector"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
